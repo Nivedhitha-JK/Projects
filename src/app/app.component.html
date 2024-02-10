@@ -14,3 +14,38 @@
     </div>
   </div>
 </div>
+<hr>
+
+  <ul *ngFor="let i of info;" >
+    <li>{{i.fName}}</li>
+    <li>{{i.age}}</li>
+    <li [ngStyle]="{'background-color' : i.country === 'India' ? 'green' : 'red' }">{{i.country}}</li>
+  </ul>
+  
+  <p *ngIf="!info">No Data Found...</p>
+  <hr>
+
+  <div [ngSwitch]="day"> 
+  <div *ngSwitchCase="0">It's Sunday, rest reset focus</div>
+  <div *ngSwitchCase="1">It's Monday, Get Ready to learn and grow</div>
+  <div *ngSwitchCase="2">It's Tuesday</div>
+  <div *ngSwitchCase="3">It's Wednesday</div>
+  <div *ngSwitchCase="4">It's Thursday</div>
+  <div *ngSwitchCase="5">It's Friday</div>
+  <div *ngSwitchCase="6">It's Saturday</div>
+  <div *ngSwitchDefault>Uh oh! Somethings wrong</div>
+
+  </div>
+  <hr>
+
+<div>
+  <h2>Ng Class</h2>
+  <button (click)="success()" class="btn btn-success">Success</button>
+  <button (click)="danger()" class="btn btn-danger">Danger</button>
+  <button (click)="warning()" class="btn btn-warning">Warning</button>
+
+  <p [ngClass]="{'success':isSuccess, 'danger' : isDanger, 'warning': isWarning}">{{message}}</p>
+</div>
+
+<p>{{user.age}}</p>
+
