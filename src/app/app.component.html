@@ -19,7 +19,7 @@
   <ul *ngFor="let i of info;" >
     <li>{{i.fName}}</li>
     <li>{{i.age}}</li>
-    <li [ngStyle]="{'background-color' : i.country === 'India' ? 'green' : 'red' }">{{i.country}}</li>
+    <li [ngStyle]="{'background-color' : i.country === 'India' ? 'green' : 'blueviolet' }">{{i.country}}</li>
   </ul>
   
   <p *ngIf="!info">No Data Found...</p>
@@ -28,11 +28,11 @@
   <div [ngSwitch]="day"> 
   <div *ngSwitchCase="0">It's Sunday, rest reset focus</div>
   <div *ngSwitchCase="1">It's Monday, Get Ready to learn and grow</div>
-  <div *ngSwitchCase="2">It's Tuesday</div>
-  <div *ngSwitchCase="3">It's Wednesday</div>
-  <div *ngSwitchCase="4">It's Thursday</div>
-  <div *ngSwitchCase="5">It's Friday</div>
-  <div *ngSwitchCase="6">It's Saturday</div>
+  <div *ngSwitchCase="2">It's Tuesday, Go take action dude!</div>
+  <div *ngSwitchCase="3">It's Wednesday, yes we're evolving,go ahead</div>
+  <div *ngSwitchCase="4">It's Thursday, you're half way there!</div>
+  <div *ngSwitchCase="5">It's Friday, woohoo weekend is coming, finish your chores with excitement</div>
+  <div *ngSwitchCase="6">It's Saturday, wow way to go</div>
   <div *ngSwitchDefault>Uh oh! Somethings wrong</div>
 
   </div>
@@ -43,9 +43,9 @@
   <button (click)="success()" class="btn btn-success">Success</button>
   <button (click)="danger()" class="btn btn-danger">Danger</button>
   <button (click)="warning()" class="btn btn-warning">Warning</button>
-
-  <p [ngClass]="{'success':isSuccess, 'danger' : isDanger, 'warning': isWarning}">{{message}}</p>
 </div>
+<br>
+<p [ngClass]="{'success':isSuccess, 'danger' : isDanger, 'warning': isWarning}">{{message}}</p>
 
-<p>{{user.age}}</p>
+<!-- <p>{{user.age}}</p> -->
 
